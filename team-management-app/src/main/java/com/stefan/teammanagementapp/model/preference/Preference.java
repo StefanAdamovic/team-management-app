@@ -27,6 +27,5 @@ public interface Preference {
     User getUser();
 
     void setUser(User user);
-
-    //TODO do i need user relationship?
+    
 }

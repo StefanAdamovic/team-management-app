@@ -22,7 +22,5 @@ public interface Comment {
 
     void setCreatedAt(Instant createdAt);
 
-    //TODO association with project or task? I am able to comment on project, but also on each task.
-    // Should I extend ProjectComment and TaskComment?
 
 }
