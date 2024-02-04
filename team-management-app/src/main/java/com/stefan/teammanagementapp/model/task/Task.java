@@ -1,8 +1,8 @@
 package com.stefan.teammanagementapp.model.task;
 
-import com.stefan.teammanagementapp.model.comment.Comment;
-import com.stefan.teammanagementapp.model.document.Document;
-import com.stefan.teammanagementapp.model.project.Project;
+import com.stefan.teammanagementapp.model.comment.impl.CommentImpl;
+import com.stefan.teammanagementapp.model.document.impl.DocumentImpl;
+import com.stefan.teammanagementapp.model.project.impl.ProjectImpl;
 import com.stefan.teammanagementapp.model.status.Status;
 
 import java.time.Instant;
@@ -31,17 +31,17 @@ public interface Task {
 
     void setCompletedAt(Instant completedAt);
 
-    Project getProject();
+    ProjectImpl getProject();
 
-    void setProject(Project project);
+    void setProject(ProjectImpl project);
 
-    List<Document> getDocuments();
+    List<DocumentImpl> getDocuments();
 
-    void setDocuments(List<Document> documents);
+    void setDocuments(List<DocumentImpl> documents);
 
-    List<Comment> getComments();
+    List<CommentImpl> getComments();
 
-    void setComments(List<Comment> comments);
+    void setComments(List<CommentImpl> comments);
 
     Status getStatus();
 
@@ -51,9 +51,9 @@ public interface Task {
 
     void setDueDate(Instant dueDate);
 
-    boolean getIsLate();
+    Boolean getIsLate();
 
-    void setIsLate();
+    void setIsLate(Boolean isLate);
 
     TaskPriority getTaskPriority();
 

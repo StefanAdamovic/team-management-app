@@ -1,11 +1,2 @@
-project entity
-
-team entity
-
-task entity
-
-notification entity
-
-document entity
 
 define report entity

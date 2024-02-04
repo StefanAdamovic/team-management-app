@@ -1,10 +1,10 @@
 package com.stefan.teammanagementapp.model.project;
 
-import com.stefan.teammanagementapp.model.comment.Comment;
-import com.stefan.teammanagementapp.model.document.Document;
+import com.stefan.teammanagementapp.model.comment.impl.CommentImpl;
+import com.stefan.teammanagementapp.model.document.impl.DocumentImpl;
 import com.stefan.teammanagementapp.model.status.Status;
-import com.stefan.teammanagementapp.model.task.Task;
-import com.stefan.teammanagementapp.model.team.Team;
+import com.stefan.teammanagementapp.model.task.impl.TaskImpl;
+import com.stefan.teammanagementapp.model.team.impl.TeamImpl;
 
 import java.time.Instant;
 import java.util.List;
@@ -31,24 +31,23 @@ public interface Project {
 
     void setCompletedAt(Instant completedAt);
 
-    List<Team> getTeams();
+    List<TeamImpl> getTeams();
 
-    void setTeams(List<Team> teams);
+    void setTeams(List<TeamImpl> teams);
 
     Status getStatus();
 
     void setStatus(Status status);
 
-    List<Document> getDocuments();
+    List<DocumentImpl> getDocuments();
 
-    void setDocuments(List<Document> documents);
+    void setDocuments(List<DocumentImpl> documents);
 
-    List<Comment> getComments();
+    List<CommentImpl> getComments();
 
-    void setComments(List<Comment> comments);
+    void setComments(List<CommentImpl> comments);
 
+    List<TaskImpl> getTasks();
 
-    List<Task> getTasks();
-
-    void setTasks(List<Task> tasks);
+    void setTasks(List<TaskImpl> tasks);
 }

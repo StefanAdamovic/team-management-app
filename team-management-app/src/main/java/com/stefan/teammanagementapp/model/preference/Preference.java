@@ -8,13 +8,13 @@ public interface Preference {
 
     void setId(Long id);
 
-    boolean getEmailNotification();
+    Boolean getEmailNotification();
 
-    void setEmailNotification(boolean emailNotification);
+    void setEmailNotification(Boolean emailNotification);
 
-    boolean getAppNotification();
+    Boolean getAppNotification();
 
-    void setAppNotification(boolean appNotification);
+    void setAppNotification(Boolean appNotification);
 
     Theme getTheme();
 

@@ -1,6 +1,7 @@
 package com.stefan.teammanagementapp.model.team;
 
-import com.stefan.teammanagementapp.model.user.User;
+import com.stefan.teammanagementapp.model.project.impl.ProjectImpl;
+import com.stefan.teammanagementapp.model.user.impl.UserImpl;
 
 import java.util.List;
 
@@ -18,11 +19,15 @@ public interface Team {
 
     void setDescription(String description);
 
-    User getTeamLead();
+    UserImpl getTeamLead();
 
-    void setTeamLead(User teamLead);
+    void setTeamLead(UserImpl teamLead);
 
-    List<User> getTeamMembers();
+    List<UserImpl> getTeamMembers();
 
-    void setTeamMembers(List<User> teamMembers);
+    void setTeamMembers(List<UserImpl> teamMembers);
+
+    List<ProjectImpl> getProjects();
+
+    void setProjects(List<ProjectImpl> projects);
 }

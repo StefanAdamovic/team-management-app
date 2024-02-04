@@ -1,6 +1,8 @@
 package com.stefan.teammanagementapp.model.document;
 
-import com.stefan.teammanagementapp.model.user.User;
+import com.stefan.teammanagementapp.model.user.impl.UserImpl;
+
+import java.time.Instant;
 
 public interface Document {
 
@@ -10,15 +12,19 @@ public interface Document {
 
     String getFileType();
 
-    void setFileType(String FileType);
+    void setFileType(String fileType);
 
-    User getUploadedBy();
+    UserImpl getUploadedBy();
 
-    void setUploadedBy(User uploadedBy);
+    void setUploadedBy(UserImpl uploadedBy);
 
     byte[] getFileContent();
 
     void setFileContent(byte[] fileContent);
+
+    Instant getUploadedAt();
+
+    void setUploadedAt(Instant uploadedAt);
 
 
 }

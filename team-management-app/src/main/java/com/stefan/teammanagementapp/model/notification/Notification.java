@@ -1,6 +1,6 @@
 package com.stefan.teammanagementapp.model.notification;
 
-import com.stefan.teammanagementapp.model.user.User;
+import com.stefan.teammanagementapp.model.user.impl.UserImpl;
 
 import java.time.Instant;
 
@@ -18,9 +18,9 @@ public interface Notification {
 
     void setContent(String content);
 
-    User getUser();
+    UserImpl getUser();
 
-    void setUser(User user);
+    void setUser(UserImpl user);
 
     NotificationStatus getNotificationStatus();
 
