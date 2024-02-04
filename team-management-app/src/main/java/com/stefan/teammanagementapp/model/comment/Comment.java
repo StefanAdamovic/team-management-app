@@ -1,6 +1,6 @@
 package com.stefan.teammanagementapp.model.comment;
 
-import com.stefan.teammanagementapp.model.user.User;
+import com.stefan.teammanagementapp.model.user.impl.UserImpl;
 
 import java.time.Instant;
 
@@ -14,9 +14,9 @@ public interface Comment {
 
     void setContent(String content);
 
-    User getAuthor();
+    UserImpl getAuthor();
 
-    void setAuthor(User author);
+    void setAuthor(UserImpl author);
 
     Instant getCreatedAt();
 

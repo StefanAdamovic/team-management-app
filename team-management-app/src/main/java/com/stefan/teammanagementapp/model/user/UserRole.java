@@ -1,4 +1,6 @@
-package com.stefan.teammanagementapp.model.user.role;
+package com.stefan.teammanagementapp.model.user;
+
+import com.stefan.teammanagementapp.model.user.UserRoleName;
 
 public interface UserRole {
 

@@ -1,4 +1,4 @@
-package com.stefan.teammanagementapp.model.user.role;
+package com.stefan.teammanagementapp.model.user;
 
 public enum UserRoleName {
 

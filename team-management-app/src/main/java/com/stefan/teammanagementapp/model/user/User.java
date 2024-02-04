@@ -1,7 +1,6 @@
 package com.stefan.teammanagementapp.model.user;
 
-import com.stefan.teammanagementapp.model.preference.Preference;
-import com.stefan.teammanagementapp.model.user.role.UserRole;
+import com.stefan.teammanagementapp.model.user.impl.UserRoleImpl;
 
 public interface User {
 
@@ -21,13 +20,13 @@ public interface User {
 
     void setEmail(String email);
 
-    UserRole getUserRole();
+    UserRoleImpl getUserRole();
 
-    void setUserRole(UserRole userRole);
+    void setUserRole(UserRoleImpl userRole);
 
     String getPassword();
 
-    void setPassword();
+    void setPassword(String password);
 
     byte[] getProfileImage();
 

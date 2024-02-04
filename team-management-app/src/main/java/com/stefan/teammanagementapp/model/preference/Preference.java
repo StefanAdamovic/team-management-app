@@ -1,6 +1,6 @@
 package com.stefan.teammanagementapp.model.preference;
 
-import com.stefan.teammanagementapp.model.user.User;
+import com.stefan.teammanagementapp.model.user.impl.UserImpl;
 
 public interface Preference {
 
@@ -24,8 +24,8 @@ public interface Preference {
 
     void setLanguage(Language language);
 
-    User getUser();
+    UserImpl getUser();
 
-    void setUser(User user);
-    
+    void setUser(UserImpl user);
+
 }
