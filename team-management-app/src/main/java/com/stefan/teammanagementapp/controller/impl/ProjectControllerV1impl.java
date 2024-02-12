@@ -3,6 +3,7 @@ package com.stefan.teammanagementapp.controller.impl;
 import com.stefan.teammanagementapp.controller.ProjectController;
 import com.stefan.teammanagementapp.model.project.impl.ProjectRequest;
 import com.stefan.teammanagementapp.model.project.impl.ProjectResponse;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,6 +24,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ProjectControllerV1impl implements ProjectController {
 
+
+    ProjectService projectService;
+
+    @Autowired
+    public ProjectControllerV1impl(ProjectService projectService) {
+        this.projectService = projectService;
+    }
 
     @Override
     public ResponseEntity<ProjectResponse> createProject(ProjectRequest projectRequest) {
