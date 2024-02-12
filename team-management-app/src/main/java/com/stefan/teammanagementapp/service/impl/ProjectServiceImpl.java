@@ -7,6 +7,8 @@ import com.stefan.teammanagementapp.service.ProjectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ProjectServiceImpl implements ProjectService {
 
@@ -19,6 +21,11 @@ public class ProjectServiceImpl implements ProjectService {
 
     @Override
     public ProjectResponse createProject(ProjectRequest projectRequest) {
+        return null;
+    }
+
+    @Override
+    public List<ProjectResponse> getAllProjects() {
         return null;
     }
 

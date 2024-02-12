@@ -4,9 +4,13 @@ import com.stefan.teammanagementapp.model.project.impl.ProjectRequest;
 import com.stefan.teammanagementapp.model.project.impl.ProjectResponse;
 import org.springframework.http.ResponseEntity;
 
+import java.util.List;
+
 public interface ProjectController {
 
     ResponseEntity<ProjectResponse> createProject(ProjectRequest projectRequest);
+
+    public ResponseEntity<List<ProjectResponse>> getAllProjects();
 
     ResponseEntity<ProjectResponse> getProjectById(Long projectId);
 
