@@ -1,5 +1,9 @@
 package com.stefan.teammanagementapp.controller;
 
+import com.stefan.teammanagementapp.model.user.impl.PasswordUpdateRequest;
+import com.stefan.teammanagementapp.model.user.impl.UserRequest;
+import com.stefan.teammanagementapp.model.user.impl.UserResponse;
+import com.stefan.teammanagementapp.model.user.impl.UsersPageResponse;
 import org.springframework.http.ResponseEntity;
 
 public interface UserController {

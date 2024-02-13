@@ -44,7 +44,7 @@ public class ProjectImpl implements Project {
     @CreationTimestamp
     private Instant createdAt;
 
-    @Column(name = "completed_at", nullable = false)
+    @Column(name = "completed_at")
     private Instant completedAt;
 
     @Enumerated(EnumType.STRING)
@@ -64,4 +64,11 @@ public class ProjectImpl implements Project {
     @ManyToMany(cascade = CascadeType.ALL)
     private List<TeamImpl> teams;
 
+    public ProjectImpl(ProjectRequest projectRequest) {
+
+        this.name = projectRequest.getName();
+        this.description = projectRequest.getDescription();
+        this.status = projectRequest.getStatus();
+
+    }
 }

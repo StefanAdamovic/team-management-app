@@ -13,9 +13,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-//TODO Complete project controller
-
-//TODO complete mappings for project controller
 @RestController
 @RequestMapping("/projects")
 public class ProjectControllerV1impl implements ProjectController {

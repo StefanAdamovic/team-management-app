@@ -1,16 +1,52 @@
 package com.stefan.teammanagementapp.model.project.impl;
 
-//TODO Complete project request and create its interface
 
-//TODO kroz projectResponse slati listu url-ove za timove /teams/teamID - (timovi koji su na projektu)?
+import com.stefan.teammanagementapp.model.status.Status;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-//TODO kroz teamResponse slati url-ove za projekte /project/projectID - (za projekte na kojima je tim)??
-//TODO kroz teamResponse slati url-ove za korisnike /users/userID - (za korisnike koji su u timu i za team lead-a)??
+import java.time.Instant;
 
-//TODO kroz taskResponse slati url-ove za projekte /project/projectID - (za projekte na kojima je task)??
-
-//TODO kroz taskResponse slati url-ove timove /teams/teamID - (za timove na kojima je task dodljen)??
-
-//TODO kroz taskResponse slati url-ove za korisnike /users/userID - (za korisnike kojima je task dodljen)??
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class ProjectResponse {
+
+    private Long id;
+
+    @Size(min = 3, max = 30, message = "Name must be between 3 and 30 characters")
+    @NotBlank(message = "Name cannot be blank")
+    private String name;
+
+    @Size(min = 10, max = 300, message = "Description must be between 10 and 300 characters")
+    @NotBlank(message = "Description cannot be blank")
+    private String description;
+
+    private Instant createdAt;
+
+    private Instant completedAt;
+
+    @NotNull(message = "Project status cannot be null")
+    private Status status;
+
+    public ProjectResponse(ProjectImpl project) {
+        this.id = project.getId();
+        this.name = project.getName();
+        this.description = project.getDescription();
+        this.createdAt = project.getCreatedAt();
+        this.completedAt = project.getCompletedAt();
+        this.status = project.getStatus();
+    }
+
+    //    private List<DocumentResourcePoint> documents;
+//
+//    private List<CommentResourcePoint> comments;
+//
+//    private List<TaskResourcePoint> tasks;
+//
+//    private List<TeamResourcePoint> teams;
 }

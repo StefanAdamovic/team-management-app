@@ -1,5 +1,12 @@
 package com.stefan.teammanagementapp.controller;
 
+import com.stefan.teammanagementapp.model.team.impl.TeamRequest;
+import com.stefan.teammanagementapp.model.team.impl.TeamResponse;
+import com.stefan.teammanagementapp.model.user.impl.UserResponse;
+import org.springframework.http.ResponseEntity;
+
+import java.util.List;
+
 public interface TeamController {
 
     ResponseEntity<TeamResponse> createTeam(TeamRequest teamRequest);
